@@ -208,4 +208,4 @@ local function WAILRB_fake_script() -- TextButton.LocalScript
 
 	setfpscap(5)
 end
-coroutine.wrap(WAILRB_fake_script)()
+coroutine.wrap(DYMH_fake_script)()
