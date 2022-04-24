@@ -1,0 +1,219 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local Frame_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local Frame_4 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local Frame_5 = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.BorderColor3 = Color3.fromRGB(255, 85, 255)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.106382973, 0, 0.555828154, 0)
+Frame.Size = UDim2.new(0, 403, 0, 207)
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0.47945711, 0, 0.158721581, 0)
+ImageLabel.Size = UDim2.new(0, 297, 0, 174)
+ImageLabel.Image = "rbxassetid://9451362795"
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BorderColor3 = Color3.fromRGB(255, 85, 255)
+Frame_2.Position = UDim2.new(0.0272952858, 0, 0.15458937, 0)
+Frame_2.Size = UDim2.new(0, 381, 0, 0)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.250620365, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 26)
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "FPS │ Ex "
+TextLabel.TextColor3 = Color3.fromRGB(255, 85, 255)
+TextLabel.TextSize = 30.000
+
+TextButton.Parent = TextLabel
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(-0.449999988, 0, 1.61538458, 0)
+TextButton.Size = UDim2.new(0, 84, 0, 37)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "    "
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.Position = UDim2.new(0.0272952858, 0, 0.198067635, 0)
+Frame_3.Size = UDim2.new(0, 82, 0, 39)
+
+TextLabel_2.Parent = Frame_3
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(-0.709689438, 0, 0.025641026, 0)
+TextLabel_2.Size = UDim2.new(0, 194, 0, 37)
+TextLabel_2.Font = Enum.Font.Oswald
+TextLabel_2.Text = "5 FPS"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 30.000
+
+Frame_4.Parent = Frame
+Frame_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_4.BackgroundTransparency = 1.000
+Frame_4.Position = UDim2.new(0.0272952858, 0, 0.458937198, 0)
+Frame_4.Size = UDim2.new(0, 84, 0, 38)
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(-0.119106703, 0, 0.425120771, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.Oswald
+TextLabel_3.Text = "10 FPS"
+TextLabel_3.TextColor3 = Color3.fromRGB(220, 220, 220)
+TextLabel_3.TextSize = 30.000
+
+Frame_5.Parent = Frame
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BackgroundTransparency = 1.000
+Frame_5.Position = UDim2.new(0.0272952858, 0, 0.729468584, 0)
+Frame_5.Size = UDim2.new(0, 84, 0, 35)
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(-0.119106703, 0, 0.695652187, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_4.Font = Enum.Font.Oswald
+TextLabel_4.Text = "20 FPS"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 30.000
+
+-- Scripts:
+
+local function UXAPST_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(UXAPST_fake_script)()
+local function YMZDWL_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local plr = game.Players.LocalPlayer
+	local TS = game:GetService("TweenService")
+	local Close = TS:Create(script.Parent,TweenInfo.new(.55,Enum.EasingStyle.Sine,Enum.EasingDirection.In),{Position = UDim2.new(0.44,0,1.2,0)})
+	
+	local Enabled = false
+	
+	plr:GetMouse().KeyDown:connect(function(key)
+		if key == "v" then
+			if Enabled == false then
+				Pos = script.Parent.Position
+				Close:Play()
+				Enabled = true
+			else 
+				local Open = TS:Create(script.Parent,TweenInfo.new(.45,Enum.EasingStyle.Sine,Enum.EasingDirection.Out),{Position = Pos})
+				Open:Play()
+				Enabled = false
+			end
+		end
+	end)
+end
+coroutine.wrap(YMZDWL_fake_script)()
+local function WAILRB_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	setfpscap(5)
+end
+coroutine.wrap(WAILRB_fake_script)()
